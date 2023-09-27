@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/HTML-CSS-blue)
 
-# Challenge Project: ProjectTeaCozy
+# Challenge: ProjectTeaCozy
 
 This project was created as part of an assignment from my learning path with Codecademy.
 
