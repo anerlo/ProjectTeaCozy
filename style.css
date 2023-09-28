@@ -96,17 +96,19 @@ body{
     align-items: center;
 }
 .types div{
-    text-align: center;
-    flex: 1;
-    max-width: calc(33.33% - 10px);
-    margin: 10px;
-    line-height: 2;
-    padding-bottom: 60px;
+    flex-basis: calc(33.33% - 20px); /* 33.33% - 20px para que haya espacio entre las imágenes */
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+    .types > div {
+        flex-basis: calc(100% - 20px); /* 100% - 20px para que las imágenes ocupen toda la fila */
+        margin-right: 0;
+    }
 }
 .main-container{
-    background-image: url(Resources/Images/img-locations-background.jpg);
-    height: 500px;
-    width: 1000px;
+    background-image: url('https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg?_gl=1*1s9566d*_ga*MjI0MTY1NzMzMS4xNjkzOTUyOTE3*_ga_3LRZM6TM9L*MTY5NTg3NTMxNy42MS4xLjE2OTU4NzUzNDQuMzMuMC4w');
+    background-size: cover;
     opacity: 0.9;
     margin: auto;
     justify-content: center;
@@ -119,20 +121,27 @@ body{
 }
   .centered {
     display: flex;
-    justify-content: space-around; /* Distribuir elementos de manera uniforme en el espacio disponible */
-    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-shrink: 1;
   }
-
   .centered-text1,
   .centered-text2,
   .centered-text3 {
     text-align: center;
-    flex: 1;
     padding: 20px; 
     background-color: black;
     margin: 20px;
     line-height: 2;
+    flex-basis: 100%;
   }
+  @media (max-width: 768px) {
+    .centered-text1,
+    .centered-text2,
+    .centered-text3 {
+        flex-basis: 100%;
+    }
+}
   footer{
     width: 100%;
     height: 200px;
